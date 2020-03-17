@@ -1,3 +1,5 @@
+
+//---- why my routing file not updating 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -25,7 +27,7 @@ const routes: Routes = [
   {
     path: 'member-about',
     component: MemberAboutComponent,
-    data: { title: 'About' }
+    data: { title: 'About Info.' }
   },
 ];
 
