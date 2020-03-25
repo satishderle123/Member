@@ -1,10 +1,11 @@
 
 <div>
     <div class="p-3 mb-2 bg-dark text-white">
-    <h3><p class="text-danger"> Member View Form </p></h3>
+        <h3> Member View Form </h3>
     </div>
   <span class="border border-danger">
-  
+
+<div class="card">
 <Form [formGroup]="MemberViewFbForm" (ngSubmit)="OnSubmit()">
 <div class="form-row align-items-center">
 
@@ -44,6 +45,11 @@
   </div>
 </div>
 </Form>
+</div>
+<div class="card">
+  Second half
+</div>
+
   {{ MemberViewFbForm.value | json }}
   </span>
   </div>
