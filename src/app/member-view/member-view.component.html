@@ -1,9 +1,12 @@
+<p>
+  Form Status: {{ memberViewFbForm.status }}
+</p>
 
 <div class="container-lg p-3 my-3 bg-primary text-white border">
   <div class="card-deck">  
     <div class="card bg-secondary text-white">  <!--1st Card-->
 
-      <Form [formGroup]="MemberViewFbForm" (ngSubmit)="OnSubmit()">
+      <Form [formGroup]="memberViewFbForm" (ngSubmit)="onSubmit()">
       <div class="form-row align-items-center">  <!--For Aligned controls, otherwise all in one col.-->
         <div class="Form-group">
           <label class="col-form-label">Member No. </label>
