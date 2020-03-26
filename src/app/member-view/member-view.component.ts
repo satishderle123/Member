@@ -15,12 +15,12 @@ export class MemberViewComponent implements OnInit {
   ngOnInit() {
     /* Initialize any Control here if any like this.cat="SC, ST, OBC, ...." */
       this.memberViewFbForm =  this.fb.group({
-      MemNo: ['', [Validators.required, Validators.minLength(7),Validators.maxLength(7)]],
-      RegNo: ['', [Validators.required]],
-      MemberName: ['', [Validators.required, Validators.minLength(6)],Validators.name],
-      Addr1: ['', [Validators.required, Validators.minLength(6)]],
-      Addr2: ['', [Validators.required, Validators.minLength(6)]],
-      Village: ['', [Validators.required, Validators.name]],
+      MemNo: [''],
+      RegNo: [''],
+      MemberName: [''],
+      Addr1: [''],
+      Addr2: [''],
+      Village: [''],
 
     },);
   }

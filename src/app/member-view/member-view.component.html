@@ -20,8 +20,8 @@
 
         <div class="Form-group" >
           <label>Member Name </label>
-          <input [class.is-invalid]="MemberViewFbForm.get('MemberName').invalid && MemberViewFbForm.get('MemberName').touched" formControlName="MemberName" type="text" class="form-control form-control-sm" name="MemberName" style="width: 200px;" >
-          <!-- <small [class.d-none] ="MemberViewFbForm.get('MemberName').valid || MemberViewFbForm.get('MemberName').untouched" class="text-danger">Name required *</small>  -->
+          <input [class.is-invalid]="memberViewFbForm.get('MemberName').invalid && memberViewFbForm.get('MemberName').touched" formControlName="MemberName" type="text" class="form-control form-control-sm" name="MemberName" style="width: 200px;" >
+          <!-- <small [class.d-none] ="memberViewFbForm.get('MemberName').valid || memberViewFbForm.get('MemberName').untouched" class="text-danger">Name required *</small>  -->
         </div>       
         
         <div class="Form-group">
