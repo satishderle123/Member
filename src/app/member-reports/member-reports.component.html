@@ -5,16 +5,17 @@
         <tr>
           <th>#</th>
           <th>Name</th>
+          <th>Description</th>
           <th>Email</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let employee of employees">
-  
-          <td> </td>
-          <td> </td>
-          <td> </td>
+          <td>{{employee.id}}</td>
+          <td>{{employee.name}} </td>
+          <td>{{employee.description}} </td>
+          <td>{{employee.email}}</td>
           <td>
             <button class="btn btn-primary" (click)="selectEmployee(employee)"> Select</button>
           </td>

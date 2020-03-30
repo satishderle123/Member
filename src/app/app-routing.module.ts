@@ -9,7 +9,7 @@ import { MemberAboutComponent} from './member-about/member-about.component';
 
 const routes: Routes = [
   {
-    path: 'member-home',
+    path: '',           //To load by default, keep it empty
     component: MemberHomeComponent,
     data: { title: 'Home' }
   },

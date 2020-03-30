@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -19,6 +20,7 @@ export class MemberReportsComponent implements OnInit {
 
   ngOnInit() { }
 
+/*---------User Defined methods/proceedures------*/
   public createEmployee(e: {id, name, description, email}){
     this.employees.push(e);
   }
@@ -26,4 +28,5 @@ export class MemberReportsComponent implements OnInit {
   public selectEmployee(e){
     this.selectedEmployee = e;
  }
+
 }

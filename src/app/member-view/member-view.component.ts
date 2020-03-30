@@ -22,6 +22,21 @@ ngOnInit() {
     Addr1: ['', [Validators.required, Validators.minLength(6)]],
     Addr2: ['', [Validators.required, Validators.minLength(6)]],
     Village: ['', [Validators.required]], //Validators.name
+    Taluka: ['', [Validators.required]], //Validators.name
+    Corr1: ['', [Validators.required, Validators.minLength(6)]],
+    Corr2: ['', [Validators.required, Validators.minLength(6)]],
+    Centre: ['', [Validators.required, Validators.minLength(6)]],
+    SubCentre: ['', [Validators.required, Validators.minLength(6)]],
+    CentCode: ['', [Validators.required, Validators.minLength(6)]],
+    Cent1: ['', [Validators.required, Validators.minLength(6)]],
+    
+    mMemberName: ['', [Validators.required, Validators.minLength(6)]], //Validators.name
+    mAddr1: ['', [Validators.required, Validators.minLength(6)]],
+    mAddr2: ['', [Validators.required, Validators.minLength(6)]],
+    mVillage: ['', [Validators.required]], //Validators.name
+    mTaluka: ['', [Validators.required]], //Validators.name
+    mCorr1: ['', [Validators.required, Validators.minLength(6)]],
+    mCorr2: ['', [Validators.required, Validators.minLength(6)]],
   })
  }
 

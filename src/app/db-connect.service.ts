@@ -1,16 +1,26 @@
-var express = require('express');
-var app = express();
+import { Injectable } from '@angular/core';
 
-app.get('/', function (req, res) 
- {
+@Injectable({
+  providedIn: 'root'
+})
+export class DbConnectService {
+
+  constructor() { }
+
+  ConnectMyDB(){
+    var express = require('express');
+    var app = express();
+
+    app.get('/', function (req, res) 
+    {
     var sql = require("mssql");
     var config = 
-   {
+     {
         user: 'sa',
         password: 'ISD@123',
         server: '117.254.196.48', 
         database: 'Member' 
-   };
+     };
 
     sql.connect(config, function (err) 
     {
@@ -22,8 +32,13 @@ app.get('/', function (req, res)
                res.send(recordset);
         });
     });
-});
+  });
 
-var server = app.listen(5000, function () {
+  var server = app.listen(5000, function () {
     console.log('Server is running..');
-});
+    alert('Server is running and DB Connected..');
+    });
+  } //ConnectMyDB Menthod
+
+
+} //DbConnectService
