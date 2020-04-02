@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DbConnectService } from './db-connect.service';
+import { MemberService } from './member.service';
 
-describe('DbConnectService', () => {
-  let service: DbConnectService;
+describe('MemberService', () => {
+  let service: MemberService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DbConnectService);
+    service = TestBed.inject(MemberService);
   });
 
   it('should be created', () => {

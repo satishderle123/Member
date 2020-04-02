@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MemberService } from '../member.service';
 
 @Component({
   selector: 'app-member-grid',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member-grid.component.css']
 })
 export class MemberGridComponent implements OnInit {
-
-  constructor() { }
+  
+  public members = [];
+  constructor(private _memberService:MemberService) { }
 
   ngOnInit() {
+    this.members = this._memberService.getMembers();
   }
 
 }

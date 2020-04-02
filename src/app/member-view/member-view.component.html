@@ -1,5 +1,7 @@
-<!---Form Status: {{ memberViewFbForm.status }}  -->
+
+Form Status: {{ memberViewFbForm.status }}  
 <Form [formGroup]="memberViewFbForm" (ngSubmit)="onSubmit()" > 
+
 
 <div class="container-lg p-3 my-3 bg-primary text-white border">
   <div class="card-deck">  
@@ -8,13 +10,11 @@
         <div class="Form-group">
             <label for="MemNo" class="col-form-label">Member No.: </label>
             <input id="MemNo" formControlName="MemNo" type="text" class="form-control form-control-sm" minlength="5" style="width: 100px;" [class.is-invalid]="memberViewFbForm.get('MemNo').invalid && memberViewFbForm.get('MemNo').touched">
-            <!---->
           </div>
           
           <div class="Form-group">
             <label for="RegNo" class="col-form-label" style="text-align: right;">Regr.No.:</label>
             <input id="RegNo" formControlName="RegNo" type="text" class="form-control form-control-sm" style="width: 80px;" [class.is-invalid]="memberViewFbForm.get('RegNo').invalid && memberViewFbForm.get('RegNo').touched">
-            <!----->
           </div>
   
           <div class="Form-group" >
@@ -39,7 +39,7 @@
           </div>
   
           <div class="Form-group">
-            <label for="Taluka" class="col-form-label">Taluka: </label>
+            <label for="Taluka" class="col-form-label" style="text-align: right;">Taluka: </label>
             <input id="Taluka" formControlName="Taluka" type="text" class="form-control form-control-sm" style="width: 100px;">
           </div>
   
@@ -58,7 +58,7 @@
             <input id="Centre" formControlName="Centre" type="text" class="form-control form-control-sm" style="width: 100px;">
           </div>
           <div class="Form-group">
-            <label for="SubCentre" class="col-form-label">SubCentre: </label>
+            <label for="SubCentre" class="col-form-label" style="text-align: right;">SubCentre: </label>
             <input id="SubCentre" formControlName="SubCentre" type="text" class="form-control form-control-sm" style="width: 100px;">
           </div>
           <div class="Form-group">
@@ -67,7 +67,7 @@
           </div>
   
           <div class="Form-group">
-            <label for="Cent1" class="col-form-label">Cent1: </label>
+            <label for="Cent1" class="col-form-label" style="text-align: right;">Cent1: </label>
             <input id="Cent1" formControlName="Cent1" type="text" class="form-control form-control-sm" style="width: 100px;">
           </div>
         </div> <!--Form Align Control 1 -->  
@@ -97,7 +97,7 @@
         </div>
   
         <div class="Form-group">
-          <label for="mTaluka" class="col-form-label">Taluka: </label>
+          <label for="mTaluka" class="col-form-label" style="text-align: right;">Taluka: </label>
           <input id="mTaluka" formControlName="mTaluka" type="text" class="form-control form-control-sm" style="width: 100px;">
         </div>
   
@@ -121,13 +121,14 @@
 </div>  <!---Top Container-->
 
 <div> <!-- Button -->
-  <button class="btn btn-primary" type="submit"> Submit </button>
+  <button class="btn btn-primary" type="submit" [disabled]="!memberViewFbForm.valid"> Submit </button> &nbsp;
+  <button click= "onReset()" class="btn btn-warning" type="cancel" [disabled]="!memberViewFbForm.invalid"> Cancel </button>
 </div>    
 </Form>
 Form Values: {{ memberViewFbForm.value | json}}
 
 <div>
   <footer>
-   <p>Maratha Vidya Prasarak Samaj, Nashik-422002 &copy; 2018</p>
+    <p>Maratha Vidya Prasarak Samaj, Nashik-422002 &copy; 2018</p>
   </footer>
 </div>

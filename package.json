@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
     "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
     "mssql": "^6.2.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

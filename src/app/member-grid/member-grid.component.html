@@ -1,2 +1,5 @@
-<p>member-grid works!</p>
-<p>This is second line </p>
+<h5>Shows Members </h5>
+
+<ul *ngFor="mem of members">
+    <li>{{mem.id}}, {{mem.name}}, {{mem.age}}</li>
+</ul>
