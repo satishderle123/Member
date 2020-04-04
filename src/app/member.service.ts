@@ -1,20 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-@Injectable({
-  providedIn: 'root'
-})
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { IMember } from './members';
+import { Observable, observable } from 'rxjs';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
+@Injectable()
 export class MemberService {
+
+  private _url: string = "/assets/data/memberTable.json";
 
   constructor(private http:HttpClient) { }
 
-  getMembers() {
-    return [
-      {"id": "1001", "name": "Pawar Kashinath Popat", "age": "85" },
-      {"id": "1002", "name": "Dhikale Damodar Kisan", "age": "53" },
-      {"id": "1003", "name": "Patil Bhika Nathu",     "age": "70" },
-      {"id": "1004", "name": "Raje Shirish Subhash",  "age": "73" },
-      {"id": "1005", "name": "Bhamare Tukaram Vithal","age": "50" }
-    ]
+  
+  getMembers(): Observable<IMember[]>{
+    return this.http.get<IMember[]>(this._url)
+                    .catch(this.errorHandler);
+  }
+
+  errorHandler(error:HttpErrorResponse){
+      return Observable.throw(error.message || "Server Error");
+      
   }
 }

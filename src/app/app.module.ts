@@ -20,15 +20,13 @@ import { MemberService } from './member.service';
     MemberGridComponent,
     MemberAboutComponent,
   ],
-  /*jjjjj*/
 
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule,
-    MemberService
+    HttpClientModule
   ],
 
   providers: [MemberService],

@@ -1,5 +1,6 @@
 <h5>Shows Members </h5>
-
-<ul *ngFor="mem of members">
-    <li>{{mem.id}}, {{mem.name}}, {{mem.age}}</li>
+<h5>{{errorMsg}}</h5>
+<ul *ngFor="let mem of members">
+  <li>ID-{{mem.memno}} Member Name-{{mem.name}} Member Address-{{mem.addr1}}</li>
 </ul>
+
