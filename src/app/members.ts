@@ -7,4 +7,5 @@ export interface IMember{
     addr2:string;
     village:string;
     tal:string;
+    memImageUrl:ImageBitmap;
 }
