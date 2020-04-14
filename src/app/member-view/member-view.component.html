@@ -1,50 +1,134 @@
 
-<div>
-    <div class="p-3 mb-2 bg-dark text-white">
-    <h3><p class="text-danger"> Member View Form </p></h3>
-    </div>
-  <span class="border border-danger">
+Form Status: {{ memberViewFbForm.status }}  
+<Form [formGroup]="memberViewFbForm" (ngSubmit)="onSubmit()" > 
+
+
+<div class="container-lg p-3 my-3 bg-primary text-white border">
+  <div class="card-deck">  
+    <div class="card bg-secondary text-white">  <!--1st Card-->
+      <div class="form-row align-items-center">  <!--For Aligned controls, otherwise all in one col.  -->
+        <div class="Form-group">
+            <label for="MemNo" class="col-form-label">Member No.: </label>
+            <input id="MemNo" formControlName="MemNo" type="text" class="form-control form-control-sm" minlength="5" style="width: 100px;" [class.is-invalid]="memberViewFbForm.get('MemNo').invalid && memberViewFbForm.get('MemNo').touched">
+          </div>
+          
+          <div class="Form-group">
+            <label for="RegNo" class="col-form-label" style="text-align: right;">Regr.No.:</label>
+            <input id="RegNo" formControlName="RegNo" type="text" class="form-control form-control-sm" style="width: 80px;" [class.is-invalid]="memberViewFbForm.get('RegNo').invalid && memberViewFbForm.get('RegNo').touched">
+          </div>
   
-<Form [formGroup]="MemberViewFbForm" (ngSubmit)="OnSubmit()">
-<div class="form-row align-items-center">
+          <div class="Form-group" >
+            <label for="MemberName" class="col-form-label">Member Name: </label>
+            <input id="MemberName" formControlName="MemberName" type="text"  class="form-control form-control-sm" style="width: 260px;" [class.is-invalid]="memberViewFbForm.get('MemberName').invalid && memberViewFbForm.get('MemberName').touched">
+            <small [class.d-none] ="memberViewFbForm.get('MemberName').valid || memberViewFbForm.get('MemberName').untouched" class="text-danger">Name required *</small> 
+          </div>       
+          
+          <div class="Form-group">
+            <label for="Addr1" class="col-form-label">Permanent </label>
+            <input formControlName="Addr1" type="text" class="form-control form-control-sm" style="width: 260px;">
+          </div>
+  
+          <div class="Form-group">
+            <label for="Addr1" class="col-form-label">Address: </label>
+            <input formControlName="Addr2" type="text" class="form-control form-control-sm" style="width: 260px;">
+          </div>
+      
+          <div class="Form-group">
+            <label for="Village" class="col-form-label">Village: </label>
+            <input id="Village" formControlName="Village" type="text" class="form-control form-control-sm" style="width: 100px;">
+          </div>
+  
+          <div class="Form-group">
+            <label for="Taluka" class="col-form-label" style="text-align: right;">Taluka: </label>
+            <input id="Taluka" formControlName="Taluka" type="text" class="form-control form-control-sm" style="width: 100px;">
+          </div>
+  
+          <div class="Form-group">
+            <label for="Corr1" class="col-form-label">Correspo. </label>
+            <input id="Corr1" formControlName="Corr1" type="text" class="form-control form-control-sm" style="width: 260px;">
+          </div>
+  
+          <div class="Form-group">
+            <label for="Corr2" class="col-form-label">Address: </label>
+            <input id="Corr2" formControlName="Corr2" type="text" class="form-control form-control-sm" style="width: 260px;">
+          </div>
+  
+          <div class="Form-group">
+            <label for="Centre" class="col-form-label">Centre: </label>
+            <input id="Centre" formControlName="Centre" type="text" class="form-control form-control-sm" style="width: 100px;">
+          </div>
+          <div class="Form-group">
+            <label for="SubCentre" class="col-form-label" style="text-align: right;">SubCentre: </label>
+            <input id="SubCentre" formControlName="SubCentre" type="text" class="form-control form-control-sm" style="width: 100px;">
+          </div>
+          <div class="Form-group">
+            <label for="CentCode" class="col-form-label">Centre Code: </label>
+            <input id="CentCode" formControlName="CentCode" type="text" class="form-control form-control-sm" style="width: 100px;">
+          </div>
+  
+          <div class="Form-group">
+            <label for="Cent1" class="col-form-label" style="text-align: right;">Cent1: </label>
+            <input id="Cent1" formControlName="Cent1" type="text" class="form-control form-control-sm" style="width: 100px;">
+          </div>
+        </div> <!--Form Align Control 1 -->  
+    </div> <!---1st Cards-->
 
-
-    <div class="Form-group">
-        <label>Member No. </label>
-        <input formControlName="MemNo" type="text" class="form-control" name="MemNo" minlength="5" style="width: 100px;" >
-     </div>
-   
-     <div class="Form-group">
-        <label>Reg.No. </label>
-        <input formControlName="RegNo" type="text" class="form-control" name="RegNo" style="width: 100px;" >
-     </div>
- 
-    <div class="Form-group" >
-      <label>Member Name </label>
-      <input [class.is-invalid]="MemberViewFbForm.get('MemberName').invalid && MemberViewFbForm.get('MemberName').touched" formControlName="MemberName" type="text" class="form-control" name="MemberName" style="width: 200px;" >
-      <!-- <small [class.d-none] ="MemberViewFbForm.get('MemberName').valid || MemberViewFbForm.get('MemberName').untouched" class="text-danger">Name required *</small>  -->
-    </div>                      
+    <div class="card bg-secondary text-white"> <!---2nd Card-->
+      <div class="form-row align-items-center">  <!--For Aligned controls, otherwise all in one col.  -->
+        <div class="Form-group" >
+          <label for="mMemberName" class="col-form-label">Marathi Name: </label>
+          <input id="mMemberName" formControlName="mMemberName" type="text"  class="form-control form-control-sm" style="width: 260px;" [class.is-invalid]="memberViewFbForm.get('mMemberName').invalid && memberViewFbForm.get('mMemberName').touched">
+          <small [class.d-none] ="memberViewFbForm.get('MemberName').valid || memberViewFbForm.get('MemberName').untouched" class="text-danger">Name required *</small> 
+        </div>       
+        
+        <div class="Form-group">
+          <label for="mAddr1" class="col-form-label">Permanent </label>
+          <input formControlName="mAddr1" type="text" class="form-control form-control-sm" style="width: 260px;">
+        </div>
+  
+        <div class="Form-group">
+          <label for="mAddr1" class="col-form-label">Address: </label>
+          <input formControlName="mAddr2" type="text" class="form-control form-control-sm" style="width: 260px;">
+        </div>
     
-  <div class="Form-group">
-      <label>Address : </label>
-      <input formControlName="Addr1" type="text" class="form-control" name="Addr1" style="width: 400px;" >
-  </div>
+        <div class="Form-group">
+          <label for="mVillage" class="col-form-label">Village: </label>
+          <input id="mVillage" formControlName="mVillage" type="text" class="form-control form-control-sm" style="width: 100px;">
+        </div>
   
-    <div class="Form-group">
-      <input formControlName="Addr2" type="text" class="form-control" name="Addr2" style="width: 400px;">
-    </div>
+        <div class="Form-group">
+          <label for="mTaluka" class="col-form-label" style="text-align: right;">Taluka: </label>
+          <input id="mTaluka" formControlName="mTaluka" type="text" class="form-control form-control-sm" style="width: 100px;">
+        </div>
   
-  <div class="Form-group">
-      <label>Village</label>
-      <input formControlName="Village" type="text" class="form-control" name="Village" style="width: 400px;">
-  </div>
-  <div>
-    <br/>
-    <button class="btn btn-primary" type="submit"> Submit </button>
-  </div>
-</div>
+        <div class="Form-group">
+          <label for="mCorr1" class="col-form-label">Correspo. </label>
+          <input id="mCorr1" formControlName="mCorr1" type="text" class="form-control form-control-sm" style="width: 260px;">
+        </div>
+  
+        <div class="Form-group">
+          <label for="mCorr2" class="col-form-label">Address: </label>
+          <input id="mCorr2" formControlName="mCorr2" type="text" class="form-control form-control-sm" style="width: 260px;">
+        </div>
+  
+      </div> <!--Form Align Control 2 --> 
+    </div> <!--- 2nd Card-->
+
+    <div class="card bg-secondary text-white" style="max-width: 120px;">  <!--Photo Card-->
+      <img class="card-img-top" src="./assets/malePlaceholder.png" alt="Member Photo">
+    </div>  <!---Photo Card -->
+  </div> <!--- Card Deck --->
+</div>  <!---Top Container-->
+
+<div> <!-- Button -->
+  <button class="btn btn-primary" type="submit" [disabled]="!memberViewFbForm.valid"> Submit </button> &nbsp;
+  <button click= "onReset()" class="btn btn-warning" type="cancel" [disabled]="!memberViewFbForm.invalid"> Cancel </button>
+</div>    
 </Form>
-  {{ MemberViewFbForm.value | json }}
-  </span>
-  </div>
-  
+Form Values: {{ memberViewFbForm.value | json}}
+
+<div>
+  <footer>
+    <p>Maratha Vidya Prasarak Samaj, Nashik-422002 &copy; 2018</p>
+  </footer>
+</div>

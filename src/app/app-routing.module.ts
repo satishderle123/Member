@@ -1,14 +1,18 @@
 
-//---- why my routing file not updating 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { MemberHomeComponent } from './member-home/member-home.component';
 import { MemberViewComponent } from './member-view/member-view.component';
 import { MemberReportsComponent } from './member-reports/member-reports.component';
 import { MemberGridComponent } from './member-grid/member-grid.component';
 import { MemberAboutComponent} from './member-about/member-about.component';
 
 const routes: Routes = [
+  {
+    path: '',           //To load by default, keep it empty
+    component: MemberHomeComponent,
+    data: { title: 'Home' }
+  },
   {
     path: 'member-view',
     component: MemberViewComponent,
@@ -36,4 +40,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-//---- why my routing file not updating 22

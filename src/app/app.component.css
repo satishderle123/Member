@@ -1,0 +1,23 @@
+
+.container-lg {
+    position: relative;   /* Dont Change Value*/
+    margin: 0px 0px;
+    padding: 0px 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+
+  .navbar a {
+    background: var(--red);
+    display: block;
+    text-decoration: none;
+    padding-right: 1.4rem; 
+    padding-left: 1px;
+    padding-bottom: 2px;
+    color: var(--dark);
+    font-size: 1.1rem;
+  }
+
+  .navbar {
+    margin:0px 0px 0px
+  }

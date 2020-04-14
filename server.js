@@ -8,7 +8,7 @@ app.get('/', function (req, res)
    {
         user: 'sa',
         password: 'ISD@123',
-        server: '172.16.2.12', 
+        server: '117.254.196.48', 
         database: 'Member' 
    };
 

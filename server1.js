@@ -7,15 +7,15 @@ app.get('/', function (req, res)
  {
     var sql = require("mssql");
     var config = 
-   {
+      {
         user: 'sa',
         password: 'ISD@123',
-        server: '172.16.2.12', 
+        server: '117.254.196.48', 
         database: 'Member' 
-   };
+      };
 
    sql.connect(config, function (err) 
-    {
+     {
         if (err) console.log(err);
            var request = new sql.Request();
         request.query('select * from memmast', function (err, recordset) 
