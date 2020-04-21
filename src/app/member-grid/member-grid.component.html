@@ -1,6 +1,28 @@
 <h5>Shows Members </h5>
 <h5>{{errorMsg}}</h5>
-<ul *ngFor="let mem of members">
-  <li>ID-{{mem.memno}} Member Name-{{mem.name}} Member Address-{{mem.addr1}}</li>
-</ul>
-
+<div class="table-responsive-sm">
+<table class="table table-dark table-striped table-hover table-sm table-bordered">
+  <thead>
+    <tr>
+     <th>Sr.No.</th>
+     <th>Reg.No.</th>
+     <th>Member Name</th>
+     <th>Address</th>
+     <th>Village</th>
+     <th>Taluka</th>
+     <th>Mobile No.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mem of members; index as i">
+      <td>{{i+1}}</td>
+      <td>{{mem.memno}}</td>
+      <td>{{mem.name}}</td>
+      <td>{{mem.addr1}} {{mem.addr2}}</td>
+      <td>{{mem.village}}</td>
+      <td>{{mem.tal}}</td>
+      <td>{{mem.mobileno}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
