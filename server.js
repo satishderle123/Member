@@ -58,7 +58,7 @@ var  executeQuery = function(res, query){
 
 //GET API  ----->  THIS IS ENTRY POINT OF THE APIs
 app.get("/api/memmast", function(req , res){
-                var query = "SELECT MemNo,RegNo,Name,Dead,MobileNo,Sex,Addr1,Addr2,Village,Tal,Corr1,Corr2,Cent_Code,Centre,Cent_SubCode,Cent_SubCentre,Cent_VilCode,mName,mAddr1,mAddr2,mVillage,mTal,mCorr1,mCorr2,Remark FROM memmast WHERE Village='SAIKHEDA'";  /*mobileno='981111111111'"; */
+                var query = "SELECT MemNo,RegNo,Name,Dead,MobileNo,Sex,Addr1,Addr2,Village,Tal,Corr1,Corr2,Cent_Code,Centre,Cent_SubCode,Cent_SubCentre,Cent_VilCode,mName,mAddr1,mAddr2,mVillage,mTal,mCorr1,mCorr2,Remark FROM memmast WHERE mobileno='981111111111'"; 
                 executeQuery (res, query);
                 //res.send('Response send to client::'+req.query.name);
                 console.log("In app.get function");
