@@ -67,4 +67,11 @@ onReset() {
     this.memberViewFbForm.reset();  
   }
 
+SearchMember() {
+  //Logic for Searching member by MemNo/Name/MobileNo
+  //this.memberViewFbForm.get()
+
+}
+
+
 } //main closing brace

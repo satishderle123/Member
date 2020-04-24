@@ -3,7 +3,7 @@ export interface IMember{
     MemNo: string;
     RegNo: number;
     Name: string;
-    dead: string;
+    Dead: string;
     MobileNo:string;
     Sex:string;
  //   BirthDate:Date;  //Date, String or Any

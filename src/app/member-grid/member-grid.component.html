@@ -16,12 +16,13 @@
   <tbody>
     <tr *ngFor="let mem of members; index as i">  <!--members[] is an Array from Component -->
       <td>{{i+1}}</td>
-      <td>{{mem.memno}}</td>
-      <td>{{mem.name}}</td>
-      <td>{{mem.addr1}} {{mem.addr2}}</td>
-      <td>{{mem.village}}</td>
-      <td>{{mem.tal}}</td>
-      <td>{{mem.mobileno}}</td>
+      <td>
+        {{ mem.MemNo }}</td>
+      <td>{{mem.Name}}</td>
+      <td>{{mem.Addr1}} {{mem.Addr2}}</td>
+      <td>{{mem.Village}}</td>
+      <td>{{mem.Tal}}</td>
+      <td>{{mem.MobileNo}}</td>
     </tr>
   </tbody>
 </table>

@@ -1,5 +1,5 @@
 .container-lg {
-  font-size: 8px;
+  font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100px;
   font-style: normal;
@@ -57,8 +57,3 @@
       float: right;
       width: calc(100% - 200px);
     } */
-  
-  /* for Buttons Fix Width - Next, Previous, Top, Bottom */
-   .custom {
-      width: 78px !important;
-  }

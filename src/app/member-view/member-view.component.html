@@ -27,7 +27,7 @@ Form Status: {{ memberViewFbForm.status }}
           </div>
           
           <div class="Form-group">
-            <label for="MobileNo" class="col-form-label" style="text-align: right;">Mobile No.:</label>
+            <label for="MobileNo" class="col-form-label">Mobile No.:</label>
             <input id="MobileNo" formControlName="MobileNo" type="text" class="form-control form-control-sm" style="width: 80px;" [class.is-invalid]="memberViewFbForm.get('MobileNo').invalid && memberViewFbForm.get('MobileNo').touched">
           </div>
 
@@ -37,7 +37,7 @@ Form Status: {{ memberViewFbForm.status }}
           </div>
 
           <div class="Form-group">
-            <label for="BirthDate" class="col-form-label" >Birth Date:</label>
+            <label for="BirthDate" class="col-form-label" style="text-align: right;">Birth Date:</label>
             <input id="BirthDate" formControlName="BirthDate" type="text" class="form-control form-control-sm" style="width: 80px;">
           </div>
           
@@ -144,15 +144,14 @@ Form Status: {{ memberViewFbForm.status }}
   </div>
   
   <button class="btn btn-primary" type="cancel" [disabled]="memberViewFbForm.valid"> Search Member </button> &nbsp;
-
-  <div class="btn-group">
+<!--<div class="btn-group">
     <button class="btn btn-success" type="cancel" [disabled]="memberViewFbForm.valid"> Next </button> &nbsp;
     <button class="btn btn-success" type="cancel" [disabled]="memberViewFbForm.valid"> Prevous </button> &nbsp;
   </div>
   <div class="btn-group">
     <button class="btn btn-secondary" type="cancel" [disabled]="memberViewFbForm.valid"> Top </button> &nbsp;
     <button class="btn btn-secondary" type="cancel" [disabled]="memberViewFbForm.valid"> Bottom </button>
-  </div>
+  </div>-->
 </div><!-- Button -->  
 </Form>
 Form Values: {{ memberViewFbForm.value | json}}

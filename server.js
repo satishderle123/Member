@@ -41,38 +41,40 @@ var  executeQuery = function(res, query){
                          // create Request object
                          var request = new sql.Request();
                          //query to the database
-                         request.query(query, function (err, recordset) { 
+                         request.query(query, function (err, data) { 
                            if (err) {
                                       console.log("Error while querying database :- " + err);
                                       res.send(err);
                                       sql.close();
                                      }
                            else {
-                                      res.send(recordset.recordsets[0]);  
+                                      res.send(data.recordset); // OR data.recordset    
+                                      //console.log(data.recordset[0].MemNo, " ",data.recordset[0].Name );                         
                                       //sql.close();
                                 }
-                           });
+                           }); 
                        }
       });           
 }
 
 //GET API  ----->  THIS IS ENTRY POINT OF THE APIs
 app.get("/api/memmast", function(req , res){
-                var query = "SELECT MemNo,RegNo,Name,Dead,MobileNo,Sex,Addr1,Addr2,Village,Tal,Corr1,Corr2,Cent_Code,Centre,Cent_SubCode,Cent_SubCentre,Cent_VilCode,mName,mAddr1,mAddr2,mVillage,mTal,mCorr1,mCorr2,Remark FROM memmast WHERE mobileno='981111111111'"; 
+                var query = "SELECT MemNo,RegNo,Name,Dead,MobileNo,Sex,Addr1,Addr2,Village,Tal,Corr1,Corr2,Cent_Code,Centre,Cent_SubCode,Cent_SubCentre,Cent_VilCode,mName,mAddr1,mAddr2,mVillage,mTal,mCorr1,mCorr2,Remark FROM memmast WHERE mobileno='9881694295'"; 
                 executeQuery (res, query);
                 //res.send('Response send to client::'+req.query.name);
                 console.log("In app.get function");
 });
 
-//GET API  ----->  For specific IDs format http://localhost:5709/api/memmastNIP3267
+//GET API  ----->  For specific IDs format http://localhost:5709/api/memmast/NIP3267
 //req.query.age used in GET Query having ? in URL, req.params.age used in GET Route where : is used
-app.get("/api/memmast:id", function(req , res){
+app.get("/api/memmast/:id", function(req , res){
     var id = req.params.id;  //var id = req.param('id');
     console.log(id);         //OR res.send(id);
     var query = "SELECT MemNo,RegNo,Name,Dead,MobileNo,Sex,Addr1,Addr2,Village,Tal,Corr1,Corr2,Cent_Code,Centre,Cent_SubCode,Cent_SubCentre,Cent_VilCode,mName,mAddr1,mAddr2,mVillage,mTal,mCorr1,mCorr2,Remark FROM memmast WHERE memno='"+id+"'";  
     executeQuery (res, query);
     console.log("In app.get :id function");
 });
+
 
 //POST API....... req.body.age is used in POST
  app.post("/api/memmast", function(req, res){
