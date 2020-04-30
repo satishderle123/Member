@@ -27,6 +27,8 @@ var dbConfig = {
     user:  'sa',
     password: 'ISD@123',
     server: '117.254.196.48',
+    //password: 'Spd@10073',
+    //server: '192.168.43.189',   
     database:'Member'
 };
 
@@ -49,7 +51,10 @@ var  executeQuery = function(res, query){
                                      }
                            else {
                                       res.send(data.recordset); // OR data.recordset    
+                                      var mRows=data.rowsAffected;
+                                      console.log(mRows);
                                       //console.log(data.recordset[0].MemNo, " ",data.recordset[0].Name );                         
+                                      //console.log(data.recordset[0]);
                                       //sql.close();
                                 }
                            }); 
@@ -59,7 +64,7 @@ var  executeQuery = function(res, query){
 
 //GET API  ----->  THIS IS ENTRY POINT OF THE APIs
 app.get("/api/memmast", function(req , res){
-                var query = "SELECT MemNo,RegNo,Name,Dead,MobileNo,Sex,Addr1,Addr2,Village,Tal,Corr1,Corr2,Cent_Code,Centre,Cent_SubCode,Cent_SubCentre,Cent_VilCode,mName,mAddr1,mAddr2,mVillage,mTal,mCorr1,mCorr2,Remark FROM memmast WHERE mobileno='9881694295'"; 
+                var query = "SELECT MemNo,RegNo,Name,Dead,MobileNo,Sex,Addr1,Addr2,Village,Tal,Corr1,Corr2,Cent_Code,Centre,Cent_SubCode,Cent_SubCentre,Cent_VilCode,mName,mAddr1,mAddr2,mVillage,mTal,mCorr1,mCorr2,Remark FROM memmast WHERE village='SAIKHEDA'"; 
                 executeQuery (res, query);
                 //res.send('Response send to client::'+req.query.name);
                 console.log("In app.get function");
