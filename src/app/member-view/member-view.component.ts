@@ -10,7 +10,14 @@ import { HttpClient } from '@angular/common/http';
 export class MemberViewComponent implements OnInit {
   memberViewFbForm : FormGroup;
   submitted = false;  
-  
+
+  deadOptions=[
+    {id:1, text:'N'},
+    {id:2, text:'Y'},
+    {id:3, text:'Q'}
+  ]
+  selection:number=1;
+
   private _url: string = "http://localhost:5709/api/memmast";  //Database URL
 
   constructor (private formbuilder: FormBuilder, private httpClient: HttpClient ) { }
