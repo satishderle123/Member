@@ -25,7 +25,10 @@
                 <!-- Setting property and initializing boldReportViewer widget.-->
                 <script type="text/javascript">
                     $(function () {
-                        $("#viewer").boldReportViewer();
+                        $("#viewer").boldReportViewer({
+                reportServiceUrl: "https://demos.boldreports.com/services/api/ReportViewer",
+                reportPath: '~/Resources/MemberRepo1Eng(1).rdl'
+            });
                     });
                 </script>
             </div>

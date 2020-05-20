@@ -13,26 +13,31 @@ const routes: Routes = [
     component: MemberHomeComponent,
     data: { title: 'Home' }
   },
+
   {
     path: 'member-view',
     component: MemberViewComponent,
     data: { title: 'Member Master' }
   },
+
+  {
+    path: 'member-grid',
+    component: MemberGridComponent,
+    data: { title: 'Grids Reports' }
+  },
+
   {
     path: 'member-reports',
     component: MemberReportsComponent,
     data: { title: 'Reports' }
   },
-  {
-    path: 'member-grid',
-    component: MemberGridComponent,
-    data: { title: 'Grids' }
-  },
+
   {
     path: 'member-about',
     component: MemberAboutComponent,
     data: { title: 'About Info.' }
-  },
+  }
+
 ];
 
 @NgModule({
