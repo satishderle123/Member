@@ -10,6 +10,7 @@ import { MemberReportsComponent } from './member-reports/member-reports.componen
 import { MemberGridComponent } from './member-grid/member-grid.component';
 import { MemberAboutComponent } from './member-about/member-about.component';
 import { MemberService } from './member.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { MemberService } from './member.service';
     MemberViewComponent,
     MemberReportsComponent,
     MemberGridComponent,
-    MemberAboutComponent,
+    MemberAboutComponent
   ],
 
   imports: [
@@ -26,7 +27,8 @@ import { MemberService } from './member.service';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
 
   providers: [MemberService],

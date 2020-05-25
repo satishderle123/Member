@@ -143,7 +143,7 @@ Form Status: {{ memberViewFbForm.status }}
     <button class="btn btn-primary" type="cancel" [disabled]="!memberViewFbForm.valid"> New </button> &nbsp;&nbsp;&nbsp;
   </div>
   
-  <button class="btn btn-primary" type="cancel" [disabled]="memberViewFbForm.valid"> Search Member </button> &nbsp;
+  <button class="btn btn-primary" type="cancel" click= "searchMember()" [disabled]="memberViewFbForm.valid"> Search Member </button> &nbsp;
 <!--<div class="btn-group">
     <button class="btn btn-success" type="cancel" [disabled]="memberViewFbForm.valid"> Next </button> &nbsp;
     <button class="btn btn-success" type="cancel" [disabled]="memberViewFbForm.valid"> Prevous </button> &nbsp;

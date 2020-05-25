@@ -74,10 +74,10 @@ onReset() {
     this.memberViewFbForm.reset();  
   }
 
-SearchMember() {
+searchMember() {
   //Logic for Searching member by MemNo/Name/MobileNo
   //this.memberViewFbForm.get()
-
+   console.log('Searching Member');
 }
 
 
