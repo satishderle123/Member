@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-
 @import "~bootstrap/dist/css/bootstrap.min.css" ;
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css');
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    font-family: 'lato', sans-serif;
+    /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+    color: #fff;
+    background: rgb(10, 113, 182); 
+}

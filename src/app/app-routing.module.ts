@@ -8,6 +8,10 @@ import { MemberGridComponent } from './member-grid/member-grid.component';
 import { MemberAboutComponent} from './member-about/member-about.component';
 
 const routes: Routes = [
+  { //Please note, This is the Child Routing of Auth Module in addition to following modules.
+    path:  'auth', loadChildren:  './auth/auth.module#AuthModule'
+  },
+
   {
     path: '',           //To load by default, keep it empty
     component: MemberHomeComponent,

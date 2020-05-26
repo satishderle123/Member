@@ -50,14 +50,14 @@ var  executeQuery = function(query){
      sql.connect(dbConfig, function (err) {
          if (err) {   
                      console.log("Error while connecting database :- " + err);
-                     'res.send(err);
+                     res.send(err);
                   }
                   else {
                          var request = new sql.Request();
                          request.query(query, function (err, data) { 
                            if (err) {
                                       console.log("Error while querying database :- " + err);
-                                      'res.send(err);
+                                      res.send(err);
                                       sql.close();
                                      }
                            else {
