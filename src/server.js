@@ -1,4 +1,4 @@
-//*********  access this api in broser as http://localhost:5000/api/memmast
+//*********  access this api in broser as http://localhost:5709/api/memmast
 var express = require("express");
 var bodyParser = require("body-parser"); //for POST 
 var sql = require("mssql");
