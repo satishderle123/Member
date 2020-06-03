@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+
+<script type = "text/javascript">
+   $(document).ready(function() {
+   document.write("Hello, satish World!");
+   $("span:first-child").text($(this).text());
+   $("span:first-child").val($(this).text());
+
+   $(‘.left-navigation a').click(function(){
+    console.log('hiding');
+    $('.menuTitle').click();
+    var title=$(this).text();
+    console.log(title);
+    $('.menuTitle').html(title);
+});
+});
+
+</script>
+</head>
+<body>
+
+<h1> Hello satish Worlds</h1>
+
+<!---
+<div> 
+  <object type="text/html" data="https://mvpsamaj.boldreports.com/reporting/en-us/reports/c21b0926-9058-4c94-933c-6265b932afdf/Sample%20Reports/MemberRepo1Eng" width="800px" height="600px" >
+  </object>
+</div> -->
+</body>
+</html>

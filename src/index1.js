@@ -1,14 +1,14 @@
 //*********  access this api in broser as http://localhost:5711/api/memmast
 "use strict";
 var express = require("express");
-var bodyParser = require("body-parser"); //for POST 
+var bodyParser = require("body-parser");
 var sql = require("mssql");
 //const  sqlite3  =  require('mssql');
 var app = express(); 
-const  router  =  express.Router();
+const router  =  express.Router();
 const cors = require('cors')
-const  jwt  =  require('jsonwebtoken');
-const  bcrypt  =  require('bcryptjs');
+const jwt  =  require('jsonwebtoken');
+const bcrypt  =  require('bcryptjs');
 const SECRET_KEY = "secretkey23456";
 
 app.use(bodyParser.json()); 
@@ -45,9 +45,10 @@ var dbConfig = {
     database:'Member'
 };
 
-//Function to connect to database and execute query----> SECOND ENTRY POINT
-var  executeQuery = function(query){             
-     sql.connect(dbConfig, function (err) {
+//*Function to connect to database and execute query----> SECOND ENTRY POINT
+var  executeQuery = function(res, query)
+    {             
+      sql.connect(dbConfig, function (err) {
          if (err) {   
                      console.log("Error while connecting database :- " + err);
                      res.send(err);
@@ -78,8 +79,10 @@ const  createUsersTable  = () => {
         name text,
         email text UNIQUE,
         password text)`;
-        return executeQuery (sqlQuery);
-        //return  executeQuery.run(sqlQuery);
+        sql.db
+        console.log("User Table Created");
+        return executeQuery (res, sqlQuery);
+        //return executeQuery.run(sqlQuery);
 }
 
 const  findUserByEmail  = (email, cb) => {
