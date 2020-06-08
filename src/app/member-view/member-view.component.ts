@@ -23,14 +23,14 @@ export class MemberViewComponent  {
     },);
 }
 
-onSubmit() {
-  this.submitted = true;
-  // stop here if form is invalid
-  if (this.memberViewForm.invalid) {
-        return;
-  }
-  alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.memberViewForm.value))
-} //onSubmit
+//onSubmit() {
+//  this.submitted = true;
+//  if (this.memberViewForm.invalid) {
+//        return; // stop here if form is invalid
+//  }
+
+//alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.memberViewForm.value))
+//} //onSubmit
 
 
 } //main closing brace
